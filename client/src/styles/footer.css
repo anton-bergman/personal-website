@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+    --card-background-color: #F2F2F2;
+    --card-color: #FFFFFF;
+    --text-color: #000000;
+    --navbar-height: 70px;
+    --border-radius: 13px;
+    --margin: 3vw;
+    --button-color: #D9D9D9;
+    --button-hover-color: #B5B5B5;
+}
+
+.footer-container {
+    position: relative;
+    top: var(--navbar-height);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--button-color);
+}
+
+#footer-name {
+    white-space: pre;
+    font-size: 1.5vw;
+    color: #323232;
+    margin: 1vw;
+    margin-bottom: 0.5vw;
+}
+
+.icon-container {
+    margin: 1vw;
+    margin-top: 0.5vw;
+}
+
+.icon-container a {
+    font-size: 2.2vw;
+    margin: 0.5vw;
+    color: #323232;
+}
+
+.icon-container a:hover {
+    cursor: pointer;
+}

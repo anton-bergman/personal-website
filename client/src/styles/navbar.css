@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+    --navbar-color: #FFFFFF;
+    --text-color: #000000;
+}
+
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: pre;
+    font-size: 14px;
+    height: 80px;
+    width: 100%;
+    padding: 0 1.5rem;
+    background-color: var(--navbar-color);
+    color: var(--text-color);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    z-index: 10;
+}
+
+
+header nav {
+    position: absolute;
+    left: calc(50% - 10.5vw);
+    display: flex;
+}
+
+.menu-btn {
+    cursor: pointer;
+    margin: 7px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.underline {
+    margin-top: 3px;
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+
+    transform-origin: left;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.5s ease-out;
+    transition-delay: 0.3s;
+}
+
+#menu-btn-active.menu-btn .underline {
+    transform-origin: left; /* Vilken riktning underlinen kommer in ifrån */
+    transform: scale(1, 1);
+
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+}
+
+/*
+.menu-btn:hover .underline {
+    transform-origin: left;
+    transform: scale(1, 1);
+}
+*/
+
+header .nav-btn {
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media only screen and (max-width: 600px) {
+
+    header .nav-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    header .visible {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear, opacity 0.25s linear;
+        background-color: var(--background-color);
+    }
+}
+

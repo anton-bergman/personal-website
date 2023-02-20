@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+    --card-background-color: #F2F2F2;
+    --card-color: #FFFFFF;
+    --text-color: #000000;
+    --navbar-height: 70px;
+    --border-radius: 13px;
+    --margin: 3vw;
+    --button-color: #D9D9D9;
+    --button-hover-color: #B5B5B5;
+}
+
+.background {
+    background-color: var(--card-background-color);
+    width: 100%;
+    height: 35vw;
+    position: relative;
+    top: var(--navbar-height);
+    display: flex;
+}
+
+.me-card {
+    background-color: var(--card-color);
+    margin: 7vw;
+    margin-top: -4vw;
+    border-radius: var(--border-radius);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    align-items: center;
+
+    display:flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.img-container {
+    width: 27vw;
+    height: 26vw;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-left: var(--margin);
+}
+
+.me-img {
+    width: 20vw;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-top: -4vw;
+}
+
+.about-me-container {
+    width: fit-content;
+    height: fit-content;
+    margin: var(--margin);
+    font-size: 2vw;
+}
+
+.about-me-text > #header {
+    margin-bottom: 1vw;
+}
+
+.about-me-text > #text {
+    font-weight: 600;
+}
+
+#resume-btn {
+    font-weight: 800;
+    font-size: 1.5vw;
+    margin: 1.5vw;
+    margin-top: 4vw;
+    background-color: var(--button-color);
+    border-radius: 200px;
+    padding: 0.8vw 1.6vw;
+    border: none;
+    outline: none;
+
+}
+
+#resume-btn:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+}
