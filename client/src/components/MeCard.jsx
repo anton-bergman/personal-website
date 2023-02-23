@@ -9,7 +9,7 @@ function MeCard() {
     const handleDownload = () => {
 
         // Make a GET request to the server to download the PDF resume
-        fetch(BACKEND_URL + '/api/resume', { method: 'GET' })
+        fetch(BACKEND_URL + '/resume', { method: 'GET' })
           .then(response => response.blob())
           .then(blob => {
             // Create a URL to the blob and trigger a download in the browser

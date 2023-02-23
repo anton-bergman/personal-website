@@ -82,6 +82,13 @@ app.get('/api/resume', (req, res) => {
   });
 });
 
+if (process.env.NODE_ENV === "staging" || process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/build/index.html"))
+  });
+}
+
 app.listen(PORT, () => {
     console.log(`Server started at https://localhost:${PORT}`)
 });
