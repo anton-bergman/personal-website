@@ -8,9 +8,9 @@ function Footer() {
     <div className="footer-container">
       <h3 id="footer-name">A N T O N    B E R G M A N</h3>
       <div className="icon-container">
-        <a href='https://www.facebook.com/anton.bergman.54966/' target="_blank"><FaFacebookSquare/></a>
-        <a href='https://linkedin.com/in/-anton-bergman-' target="_blank"><FaLinkedin/></a>
-        <a href='https://github.com/anton-bergman' target="_blank"><FaGithub/></a>
+        <a href='https://www.facebook.com/anton.bergman.54966/' target="_blank" rel="noreferrer"><FaFacebookSquare/></a>
+        <a href='https://linkedin.com/in/-anton-bergman-' target="_blank" rel="noreferrer"><FaLinkedin/></a>
+        <a href='https://github.com/anton-bergman' target="_blank" rel="noreferrer"><FaGithub/></a>
       </div>
     </div>
   )

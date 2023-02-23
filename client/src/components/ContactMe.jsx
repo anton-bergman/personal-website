@@ -3,7 +3,7 @@ import "../styles/contact_me.css";
 
 function ContactMe() {
 
-    const SERVER = "http://localhost:5000";
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL_DEV;
 
     const [formData, setFormData] = useState({
         firstName : "", 
@@ -16,15 +16,19 @@ function ContactMe() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
-        fetch(SERVER + "/api/submit-form", {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(formData)
-        })
-        .then((response) => response.text())
-        .then((data) => console.log(data))
-        .then((error) => console.log(error));
+
+        try {
+            const response = await fetch(BACKEND_URL + "/api/submit-form", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(formData)
+            });
+            if (response.ok) {
+                alert("Email sent!");
+            }
+        } catch (error) {
+            console.log(error);
+        }
 
         // Reset the form to empty
         setFormData({

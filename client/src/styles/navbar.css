@@ -1,15 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap');
+@import "variables.css";
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-:root {
-    --navbar-color: #FFFFFF;
-    --text-color: #000000;
+    font-family: var(--font-family);
 }
 
 
@@ -73,6 +68,31 @@ header nav {
 header .nav-btn {
     visibility: hidden;
     opacity: 0;
+}
+
+.navbar-icon-container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    right: 0;
+    margin: 0 3rem;
+}
+
+.navbar-icon-container a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 28px;
+    margin-left: 0.6vw;
+    margin-right: 0.6vw;
+}
+
+@media only screen and (max-width: 800px) {
+    .navbar-icon-container {
+        visibility: hidden;
+        opacity: 0;
+    }
 }
 
 @media only screen and (max-width: 600px) {

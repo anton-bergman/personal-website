@@ -1,15 +1,15 @@
 import "../styles/me_card.css";
 import AboutMeImage from "../res/alperna-img.jpg";
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL_DEV;
+
 
 function MeCard() {
 
     const handleDownload = () => {
 
-        const SERVER = "http://localhost:5000";
-
         // Make a GET request to the server to download the PDF resume
-        fetch(SERVER + '/api/resume', { method: 'GET' })
+        fetch(BACKEND_URL + '/api/resume', { method: 'GET' })
           .then(response => response.blob())
           .then(blob => {
             // Create a URL to the blob and trigger a download in the browser
@@ -26,7 +26,7 @@ function MeCard() {
         <div className="background" id="about-me">
             <div className="me-card">
                 <div className="img-container">
-                    <img className="me-img" src={AboutMeImage}/>
+                    <img className="me-img" src={AboutMeImage} alt=""/>
                 </div>
                 <div className="about-me-container">
                     <div className="about-me-text">

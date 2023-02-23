@@ -1,16 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap');
+@import "variables.css";
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-:root {
-    --background-color: #FFFFFF;
-    --text-color: #000000;
-    --navbar-height: 70px
+    font-family: var(--font-family);
 }
 
 .banner {

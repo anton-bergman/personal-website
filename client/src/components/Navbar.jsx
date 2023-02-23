@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 
-import { Link, Events } from "react-scroll";
+import { Link } from "react-scroll";
 
 import {FaBars, FaTimes} from "react-icons/fa";
+import {FaFacebookSquare, FaLinkedin, FaGithub} from "react-icons/fa";
 import "../styles/navbar.css"
 
 function Navbar() {
@@ -14,8 +15,6 @@ function Navbar() {
             setToggle("visible")
         }
         else {setToggle("hidden")}
-        
-        console.log("toggle: " + toggle);
     };
 
 
@@ -23,54 +22,39 @@ function Navbar() {
 
     const toggleState = (buttonType) => {
         setToggleState(buttonType);
-        console.log("toggledState: " + buttonType);
     };
 
-
-    const handleScroll = (e) => {
-        //console.log('Scroll: ' + window.pageYOffset);
-
-        const aboutMeComp = document.getElementById('about-me');
-        const offsetAboutMe = -300;
-
-        const myExperienceComp = document.getElementById('my-experience');
-        //const offsetMyExperience = -75;
-        const offsetMyExperience = -200;
-
-        const contactMeComp = document.getElementById('contact-me');
-        //const offsetContactMe = -75;
-        const offsetContactMe = -200;
-
-        /*console.log("AboutMeComp offsetTop: " + aboutMeComp.offsetTop);
-        console.log("AboutMeComp offsetHeight: " + aboutMeComp.offsetHeight);
-
-        console.log("MyExperience offsetTop: " + myExperienceComp.offsetTop);
-        console.log("MyEcperience offsetHeight: " + myExperienceComp.offsetHeight);*/
-
-        if (window.pageYOffset < aboutMeComp.offsetTop + offsetAboutMe) {
-            //console.log("Home")
-            //setToggleState("home");
-            toggleState("home");
-            //setScrolledToTarget(true);
-        }
-        else if (window.pageYOffset < (myExperienceComp.offsetTop + offsetMyExperience) && window.pageYOffset >= aboutMeComp.offsetTop + offsetAboutMe) {
-            //console.log("About Me")
-            toggleState("about");
-            //setScrolledToTarget(true);
-        }
-        else if (window.pageYOffset < (contactMeComp.offsetTop + offsetContactMe) && window.pageYOffset >= myExperienceComp.offsetTop + offsetMyExperience) {
-            //console.log("My Experience")
-            toggleState("experience");
-            //setScrolledToTarget(true);
-        }
-        else if (window.pageYOffset >= contactMeComp.offsetTop + offsetContactMe) {
-            //console.log("Contact Me")
-            toggleState("contact");
-            //setScrolledToTarget(true);
-        }
-    }
-
     useEffect(() => {
+
+        const handleScroll = (e) => {
+
+            const aboutMeComp = document.getElementById('about-me');
+            const offsetAboutMe = -300;
+    
+            const projectComp = document.getElementById('projects');
+            const offsetProject = -200;
+    
+            const contactMeComp = document.getElementById('contact-me');
+            const offsetContactMe = -200;
+    
+            if (window.pageYOffset < aboutMeComp.offsetTop + offsetAboutMe) {
+                toggleState("home");
+            }
+            else if (window.pageYOffset < (projectComp.offsetTop + offsetProject) && 
+                window.pageYOffset >= aboutMeComp.offsetTop + offsetAboutMe) {
+    
+                toggleState("about");
+            }
+            else if (window.pageYOffset < (contactMeComp.offsetTop + offsetContactMe) &&
+                window.pageYOffset >= projectComp.offsetTop + offsetProject) {
+    
+                toggleState("projects");
+            }
+            else if (window.pageYOffset >= contactMeComp.offsetTop + offsetContactMe) {
+                toggleState("contact");
+            }
+        }
+
         const listener = (event) => handleScroll(event, toggleState());
         window.addEventListener('scroll', listener);
     
@@ -109,13 +93,13 @@ function Navbar() {
                     <div className="underline"></div>
                 </Link>
                 <Link 
-                    to="my-experience" 
+                    to="projects" 
                     spy={true} 
                     smooth={true} 
                     offset={-75} 
                     duration={500}
                     className="menu-btn"
-                    id={toggleNavbarState === "experience" ? "menu-btn-active" : ""}>
+                    id={toggleNavbarState === "projects" ? "menu-btn-active" : ""}>
                     {/*onClick={() => toggleState("experience")} */}
                     EXPERIENCE
                     <div className="underline"></div>
@@ -131,6 +115,12 @@ function Navbar() {
                     CONTACT
                     <div className="underline"></div>
                 </Link>
+
+                <div className="navbar-icon-container">
+                    <a href='https://www.facebook.com/anton.bergman.54966/' target="_blank" rel="noreferrer"><FaFacebookSquare/></a>
+                    <a href='https://linkedin.com/in/-anton-bergman-' target="_blank" rel="noreferrer"><FaLinkedin/></a>
+                    <a href='https://github.com/anton-bergman' target="_blank" rel="noreferrer"><FaGithub/></a>
+                </div>
 
                 
 

@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react'
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import MeCard from "./components/MeCard";
-import ExperienceCards from './components/ExperienceCards';
 import Projects from "./components/Projects";
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
@@ -27,7 +26,6 @@ function App() {
       <Navbar/>
       <Banner/>
       <MeCard/>
-      <ExperienceCards/>
       <Projects/>
       <ContactMe/>
       <Footer/>
@@ -36,4 +34,5 @@ function App() {
 }
 
 export default App
+
 
