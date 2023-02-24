@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Serve the React app
-app.use(express.static('build'));
+app.use(express.static('../client/build'));
 
 // Setup CORS (Cross-Origin Resource Sharing)
 app.use((req, res, next) => {
@@ -29,10 +29,13 @@ app.use((req, res, next) => {
   });
 
 // Serve the PDF resume file statically
-console.log("__dirname: " + __dirname);
+//console.log("__dirname: " + __dirname);
 app.use('/resume.pdf', express.static(path.join(__dirname, 'resume.pdf')));
 
-
+// Send the React app for any other requests
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 app.get("/api", (req, res) => {
     res.json({"users": ["userOne", "userTwo", "userThree"]})
