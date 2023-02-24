@@ -1,7 +1,7 @@
 import "../styles/me_card.css";
 import AboutMeImage from "../res/alperna-img.jpg";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL_DEV;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL_TEST;
 
 
 function MeCard() {

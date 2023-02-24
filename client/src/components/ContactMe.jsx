@@ -3,7 +3,7 @@ import "../styles/contact_me.css";
 
 function ContactMe() {
 
-    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL_DEV;
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL_TEST;
 
     const [formData, setFormData] = useState({
         firstName : "", 
