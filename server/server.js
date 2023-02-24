@@ -8,7 +8,7 @@ const path = require('path');
 const app = express()
 
 const PORT = process.env.PORT || 5000;
-const FRONTEND_URL = process.env.FRONTEND_URL_DEV;
+const FRONTEND_URL = process.env.FRONTEND_URL_TEST;
 
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(bodyParser.urlencoded({ extended: true }));
