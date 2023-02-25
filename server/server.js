@@ -14,7 +14,7 @@ const FRONTEND_URL = process.env.FRONTEND_URL_TEST;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Parse JSON bodies (as sent by API clients)
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 
 // Serve the React app
 app.use(express.static(path.join(__dirname, '../client/build')));
