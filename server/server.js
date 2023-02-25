@@ -74,8 +74,8 @@ app.post("/api/submit-form", (req, res) => {
 // Download route for the resume file
 app.get('/api/resume', (req, res) => {
 
-  console.log("Download path: " + express.static(path.join(__dirname, '../res/resume.pdf')));
-  res.download(express.static(path.join(__dirname, '../res/resume.pdf')), 'resume.pdf', error => {
+  console.log("Download path: " + path.join(__dirname, '../res/resume.pdf'));
+  res.download(path.join(__dirname, '../res/resume.pdf'), 'resume.pdf', error => {
     if (error) {
       console.error(error);
       res.status(500).send('Server error');
