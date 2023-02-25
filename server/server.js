@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 
 // Serve the PDF resume file statically
 //console.log("__dirname: " + __dirname);
-app.use('/resume.pdf', express.static(path.resolve(__dirname, 'res')));
+app.use('/resume.pdf', express.static("./res/resume.pdf"));
 
 app.get("/api", (req, res) => {
     res.json({"users": ["userOne", "userTwo", "userThree"]})
@@ -73,8 +73,8 @@ app.post("/api/submit-form", (req, res) => {
 // Download route for the resume file
 app.get('/api/resume', (req, res) => {
 
-  console.log("Download path: " + path.resolve(__dirname, '../res/resume.pdf'));
-  res.download(path.resolve(__dirname, '../res/resume.pdf'), 'resume.pdf', error => {
+  console.log("Download path: " + "./res/resume.pdf");
+  res.download("./res/resume.pdf", 'resume.pdf', error => {
     if (error) {
       console.error(error);
       res.status(500).send('Server error');
