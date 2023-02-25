@@ -72,6 +72,8 @@ app.post("/api/submit-form", (req, res) => {
 
 // Download route for the resume file
 app.get('/api/resume', (req, res) => {
+
+  console.log("Download path: " + path.resolve(__dirname, '../res/resume.pdf'));
   res.download(path.resolve(__dirname, '../res/resume.pdf'), 'resume.pdf', error => {
     if (error) {
       console.error(error);
