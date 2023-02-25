@@ -29,11 +29,12 @@ app.use((req, res, next) => {
   });
 
 // Serve the PDF resume file statically
-console.log("__dirname: " + __dirname);
+//console.log("__dirname: " + __dirname);
 app.use('/resume.pdf', express.static(path.join(__dirname, './res')));
 
 // Send the React app for any other requests
 app.get('/*', (req, res) => {
+  res.setHeader('Content-Type', 'text/html');
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
