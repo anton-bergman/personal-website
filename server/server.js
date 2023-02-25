@@ -32,12 +32,6 @@ app.use((req, res, next) => {
 //console.log("__dirname: " + __dirname);
 app.use('/resume.pdf', express.static(path.resolve(__dirname, 'res')));
 
-// Send the React app for any other requests
-app.get('/*', (req, res) => {
-  res.setHeader('Content-Type', 'text/html');
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
-
 app.get("/api", (req, res) => {
     res.json({"users": ["userOne", "userTwo", "userThree"]})
 })
@@ -86,12 +80,11 @@ app.get('/api/resume', (req, res) => {
   });
 });
 
-if (process.env.NODE_ENV === "staging" || process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/build")));
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build/index.html"))
-  });
-}
+// Send the React app for any other requests
+app.get('/*', (req, res) => {
+  res.setHeader('Content-Type', 'text/html');
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 app.listen(PORT, () => {
     console.log(`Server started at https://localhost:${PORT}`)
