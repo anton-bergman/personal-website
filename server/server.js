@@ -29,8 +29,8 @@ app.use((req, res, next) => {
   });
 
 // Serve the PDF resume file statically
-//console.log("__dirname: " + __dirname);
-app.use('/resume.pdf', express.static(path.join(__dirname, 'resume.pdf')));
+console.log("__dirname: " + __dirname);
+app.use('/resume.pdf', express.static(path.join(__dirname, '/res/resume.pdf')));
 
 // Send the React app for any other requests
 app.get('/*', (req, res) => {
