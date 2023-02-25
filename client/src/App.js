@@ -9,6 +9,19 @@ import Footer from './components/Footer';
 
 function App() {
 
+  try {
+    const response = await fetch(BACKEND_URL + "/*", {
+        method: "GET",
+        headers: {"Content-Type": "text/html"},
+        body: {}
+    });
+    if (response.ok) {
+        alert("Email sent!");
+    }
+} catch (error) {
+    console.log(error);
+}
+
   const [backendData, setBackendData] = useState([{}])
 
   useEffect(() => {
