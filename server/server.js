@@ -40,7 +40,7 @@ app.get("/api", (req, res) => {
 app.post("/api/submit-form", (req, res) => {
     const formData = req.body;
     const {firstName, lastName, email, phone, subject, message} = req.body;
-    console.log("formData: " + formData);
+    console.log("formData: " + JSON.stringify(formData));
     //console.log(firstName + " " + lastName)
 
     const transporter = nodemailer.createTransport({
