@@ -14,7 +14,7 @@ const FRONTEND_URL = process.env.FRONTEND_URL_TEST;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Parse JSON bodies (as sent by API clients)
-//app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 // Serve the React app
 app.use(express.static(path.join(__dirname, '../client/build')));
@@ -40,7 +40,7 @@ app.get("/api", (req, res) => {
 app.post("/api/submit-form", (req, res) => {
     const formData = req.body;
     const {firstName, lastName, email, phone, subject, message} = req.body;
-    console.log("formData: " + JSON.stringify(formData));
+    //console.log("formData: " + JSON.stringify(formData));
     //console.log(firstName + " " + lastName)
 
     const transporter = nodemailer.createTransport({
@@ -73,8 +73,6 @@ app.post("/api/submit-form", (req, res) => {
 
 // Download route for the resume file
 app.get('/api/resume', (req, res) => {
-
-  console.log("Download path: " + path.join(__dirname, '../server/res/resume.pdf'));
   res.download(path.join(__dirname, '../server/res/resume.pdf'), 'resume.pdf', error => {
     if (error) {
       console.error(error);
