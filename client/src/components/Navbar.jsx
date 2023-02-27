@@ -22,8 +22,6 @@ function Navbar() {
 
     const toggleState = (buttonType) => {
         setToggleState(buttonType);
-        showNavbar();
-        console.log("toggle: " + toggle);
     };
 
     useEffect(() => {
