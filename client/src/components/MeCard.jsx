@@ -1,5 +1,8 @@
 import "../styles/me_card.css";
-import AboutMeImage from "../res/alperna-img.jpg";
+import AboutMeImage from "../res/alperna-img.webp";
+
+import ProfileImage from "../res/profile-pic-personal-website.webp"
+import {FaFacebookSquare, FaLinkedin, FaGithub} from "react-icons/fa";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL_TEST;
 
@@ -28,6 +31,16 @@ function MeCard() {
                 <div className="img-container">
                     <img className="me-img" src={AboutMeImage} alt=""/>
                 </div>
+
+                
+                <div className="image-container-phone">
+                    <img id="profile-image-phone" src={ProfileImage} alt=""/>
+                    <div className="icon-container-phone">
+                        <a id="linkedin-link" href='https://linkedin.com/in/-anton-bergman-' target="_blank" rel="noreferrer"><FaLinkedin/></a>
+                        <a id="github-link" href='https://github.com/anton-bergman' target="_blank" rel="noreferrer"><FaGithub/></a>
+                    </div>
+                </div>
+                
                 <div className="about-me-container">
                     <div className="about-me-text">
                         <h1 id="header">About Me</h1>

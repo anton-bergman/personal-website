@@ -114,3 +114,52 @@ input {
     background-color: var(--button-hover-color);
     cursor: pointer;
 }
+
+
+@media only screen and (max-width: 600px) {
+
+    .contact-me-card {
+        border-radius: var(--border-radius-phone);
+        width: 100%;
+    }
+
+    .contact-me-header {
+        font-size: var(--font-size-big-phone);
+    }
+
+    .input-row {
+        width: auto;
+    }
+
+    .input-row label {
+        font-size: var(--font-size-small-phone);
+    }
+
+    .input-row label input {
+        width: 40vw;
+        height: 4vw;
+        font-size: var(--font-size-small-phone);
+    }
+
+    .input-col label {
+        font-size: var(--font-size-small-phone);
+        width: 97%;
+    }
+
+    .input-col label input {
+        width: 100%;
+        height: 4vw;
+        font-size: var(--font-size-small-phone);
+    }
+
+    .input-message {
+        width: 100%;
+        height: 20vw;
+        font-size: var(--font-size-small-phone);
+    }
+
+    #submit-btn {
+        font-size: var(--font-size-button-phone);
+        padding: var(--button-padding-phone);
+    }
+}

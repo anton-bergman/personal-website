@@ -1,6 +1,6 @@
 import "../styles/banner.css";
-import BackgroundImage from "../res/personal-webiste-wallpaper.jpg";
-import ProfileImage from "../res/profile-pic-personal-website.png";
+import BackgroundImage from "../res/personal-website-wallpaper.webp";
+import ProfileImage from "../res/profile-pic-personal-website.webp";
 
 
 function Banner() {

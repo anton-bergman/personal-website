@@ -3,9 +3,9 @@ import React from 'react';
 import { useState } from "react";
 
 import "../styles/projects.css";
-import project1Image from "../res/personalkollen-img.png";
-import personalWebsiteImage from "../res/personal-website-img.png";
-import kmmProjectImage from "../res/kmm-img.jpg";
+import project1Image from "../res/personalkollen-img.webp";
+import personalWebsiteImage from "../res/personal-website-img.webp";
+import kmmProjectImage from "../res/kmm-img.webp";
 
 function Projects() {
 

@@ -149,3 +149,76 @@
 .tool-list > .tool {
     margin-left: 2vw;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+
+    #my-projects-header {
+        font-size: var(--font-size-big-phone);
+        margin-bottom: var(--margin);
+    }
+
+    .project-list {
+        max-height: 250vh;
+    }
+
+    #project-list-hidden {
+        max-height: 230vw;
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        margin: 0vw 3vw;
+        margin-bottom: 8vw;
+        border-radius: var(--border-radius-phone);
+    }
+
+    .project-image-container {
+        scale: 3;
+        margin: 20vw;
+        margin-bottom: 15vw;
+
+        
+    }
+
+    .project-text-container {
+        text-align: center;
+        width: 97%;
+        margin: var(--margin);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-text-container .project-name {
+        font-size: var(--font-size-big-phone);
+    }
+
+    .project-text-container .project-text {
+        font-size: var(--font-size-small-phone);
+        width: 90%;
+    }
+
+    .project-text-container .tech-header {
+        margin-top: var(--margin);
+        margin-bottom: 1vw;
+        font-size: var(--font-size-small-phone);
+    }
+
+    .tool-list {
+        font-size: var(--font-size-small-phone);
+        text-align: left;
+        -webkit-columns: 2;
+        margin-bottom: var(--margin);
+    }
+
+    .show-close-btn {
+        font-size: var(--font-size-button-phone);
+        padding: var(--button-padding-phone);
+
+    }
+}

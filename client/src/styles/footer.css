@@ -41,3 +41,15 @@
 .icon-container a:hover {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .footer-container #footer-name {
+        font-size: var(--font-size-button-phone);
+    }
+
+    .icon-container a {
+        font-size: 6vw;
+        margin: 2vw;
+    }
+}
