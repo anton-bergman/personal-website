@@ -57,7 +57,7 @@
     flex-direction: column;
     align-items: center;
 
-    max-height: 200vh;
+    max-height: 400vh;
     width: 100%;
     transition: max-height 2s;
     box-shadow: inset 0px -4px 4px -2px rgba(0, 0, 0, 0.25);
@@ -125,7 +125,7 @@
 }
 
 .project-image {
-    width: 25vw;
+    width: 26vw;
     height: auto;
 }
 
@@ -160,7 +160,7 @@
     }
 
     .project-list {
-        max-height: 250vh;
+        max-height: 400vh;
     }
 
     #project-list-hidden {
@@ -175,6 +175,10 @@
         margin: 0vw 3vw;
         margin-bottom: 8vw;
         border-radius: var(--border-radius-phone);
+    }
+
+    .project-card:hover {
+        transform: scale(1);
     }
 
     .project-image-container {
@@ -221,5 +225,9 @@
         color: var(--text-color);
         padding: var(--button-padding-phone);
 
+    }
+
+    .show-close-btn:hover {
+        background-color: var(--button-color);
     }
 }

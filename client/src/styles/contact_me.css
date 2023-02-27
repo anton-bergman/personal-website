@@ -166,4 +166,8 @@ input {
         color: var(--text-color);
         padding: var(--button-padding-phone);
     }
+
+    #submit-btn {
+        background-color: var(--button-color);
+    }
 }

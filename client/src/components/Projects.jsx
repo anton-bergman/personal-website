@@ -6,6 +6,8 @@ import "../styles/projects.css";
 import project1Image from "../res/personalkollen-img.webp";
 import personalWebsiteImage from "../res/personal-website-img.webp";
 import kmmProjectImage from "../res/kmm-img.webp";
+import pacmanProjectImage from "../res/pacman-project.webp";
+import tetrisProjectImage from "../res/tetris-project.webp";
 
 function Projects() {
 
@@ -94,6 +96,53 @@ function Projects() {
                                 <li className='tool'>Sockets</li>
                                 <li className='tool'>SPI bus</li>
                                 <li className='tool'>Control engineering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+
+                <a className="github-repo-link" href='https://github.com/anton-bergman/pacman' target="_blank" rel="noreferrer">
+                    <div className={toggle === true ? "project-card visible" : "project-card hidden"}>
+                        <div className='project-image-container'>
+                            <img className="project-image" src={pacmanProjectImage} alt=""/>
+                        </div>
+                        <div className='project-text-container'>
+                            <h1 className='project-name'>Pacman</h1>
+                            <h6 className='project-text'>
+                            I created a version of the classic game Pac-Man in Java. 
+                            Using various programming concepts such as object-oriented
+                            programming, event handling, and collision detection. Through
+                            this project, I honed my Java programming skills and gained
+                            experience in game development, problem-solving, and critical
+                            thinking.
+                            </h6>
+                            <h6 className='tech-header'>Tech used:</h6>
+                            <ul className='tool-list'>
+                                <li className='tool'>Java</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+
+                <a className="github-repo-link" href='https://github.com/anton-bergman/tetris' target="_blank" rel="noreferrer">
+                    <div className={toggle === true ? "project-card visible" : "project-card hidden"}>
+                        <div className='project-image-container'>
+                            <img className="project-image" src={tetrisProjectImage} alt=""/>
+                        </div>
+                        <div className='project-text-container'>
+                            <h1 className='project-name'>Tetris</h1>
+                            <h6 className='project-text'>
+                            I developed a Java implementation of the classic game Tetris.
+                            This project involved designing and implementing the game
+                            mechanics and graphics.The game also includes levels with
+                            increasing difficulty and high score tracking. This project
+                            helped me improve my Java programming skills and gave me
+                            experience in creating a complete software application from
+                            scratch.
+                            </h6>
+                            <h6 className='tech-header'>Tech used:</h6>
+                            <ul className='tool-list'>
+                                <li className='tool'>Java</li>
                             </ul>
                         </div>
                     </div>
