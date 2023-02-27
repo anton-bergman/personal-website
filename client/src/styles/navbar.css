@@ -135,5 +135,10 @@ header .nav-btn {
     .menu-btn {
         font-size: var(--font-size-button-phone);
     }
+
+    .underline {
+        transition: color 0s,transform 0s ease-out;
+        transition-delay: 0s;
+    }
 }
 

@@ -161,6 +161,7 @@
 
     .project-list {
         max-height: 400vh;
+        transition: max-height 0s;
     }
 
     #project-list-hidden {
