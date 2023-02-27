@@ -178,6 +178,13 @@
         border-radius: var(--border-radius-phone);
     }
 
+    .project-card.hidden{
+        visibility: hidden;
+        opacity: 0;
+        transition-delay: 0s;
+        transition: all ease-in-out 0s;
+    }
+
     .project-card:hover {
         transform: scale(1);
     }
