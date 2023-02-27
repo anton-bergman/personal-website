@@ -218,6 +218,7 @@
 
     .show-close-btn {
         font-size: var(--font-size-button-phone);
+        color: var(--text-color);
         padding: var(--button-padding-phone);
 
     }

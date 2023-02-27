@@ -63,7 +63,6 @@ div #profile-pic {
         display: flex;
         position: absolute;
         
-        border: 2px solid green;
         left: -78vw;
         height: auto !important;
         width: 262vw !important;
