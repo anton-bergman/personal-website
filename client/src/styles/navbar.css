@@ -106,7 +106,7 @@ header .nav-btn {
         position: fixed;
         top: var(--navbar-height);
         left: 0;
-        height: 35vh;
+        height: 400%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -115,17 +115,29 @@ header .nav-btn {
         /*gap: 1.5rem;*/
         gap: 1rem;
 
-        visibility: hidden;
-        opacity: 0;
-
-        border: 2px solid red;
+        transition: opacity 0.25s linear;
     }
 
     header .visible {
         visibility: visible;
         opacity: 1;
-        transition: visibility 0s linear, opacity 0.25s linear;
+        
         background-color: var(--navbar-color);
+    }
+
+    header .hidden {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.25s ease-in-out;
+    }
+
+    .nav-btn {
+        font-size: 5vw;
+        color: var(--text-color);
+    }
+    
+    .menu-btn {
+        font-size: var(--font-size-button-phone);
     }
 }
 

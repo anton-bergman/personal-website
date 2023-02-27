@@ -21,7 +21,13 @@ function Navbar() {
     const [toggleNavbarState, setToggleState] = useState();
 
     const toggleState = (buttonType) => {
-        setToggleState(buttonType);
+        if (window.innerWidth <= 600) {
+            setToggleState(buttonType);
+            showNavbar();
+        }
+        else {
+            setToggleState(buttonType);
+        }
     };
 
     useEffect(() => {

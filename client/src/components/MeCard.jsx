@@ -4,7 +4,7 @@ import AboutMeImage from "../res/alperna-img.webp";
 import ProfileImage from "../res/profile-pic-personal-website.webp"
 import {FaFacebookSquare, FaLinkedin, FaGithub} from "react-icons/fa";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL_TEST;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL_WWW;
 
 
 function MeCard() {
