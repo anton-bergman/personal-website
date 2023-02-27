@@ -20,8 +20,12 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 // Setup CORS (Cross-Origin Resource Sharing)
+const allowedOrigins = [process.env.FRONTEND_URL, process.env.FRONTEND_URL_WWW, process.env.FRONTEND_URL_TEST];
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', FRONTEND_URL);
+    const origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+      res.setHeader('Access-Control-Allow-Origin', origin);
+    }
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     res.setHeader('Access-Control-Allow-Credentials', 'true');
