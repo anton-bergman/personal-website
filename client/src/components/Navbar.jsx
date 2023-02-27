@@ -11,23 +11,19 @@ function Navbar() {
     const [toggle, setToggle] = useState("hidden");
 
     const showNavbar = () => {
-        if (toggle === "hidden") {
-            setToggle("visible")
+        if (toggle === "visible") {
+            setToggle("hidden")
         }
-        else {setToggle("hidden")}
+        else {setToggle("visible")}
     };
 
 
     const [toggleNavbarState, setToggleState] = useState();
 
     const toggleState = (buttonType) => {
-        if (window.innerWidth <= 600) {
-            setToggleState(buttonType);
-            showNavbar();
-        }
-        else {
-            setToggleState(buttonType);
-        }
+        setToggleState(buttonType);
+        showNavbar();
+        console.log("toggle: " + toggle);
     };
 
     useEffect(() => {
