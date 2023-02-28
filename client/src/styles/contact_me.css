@@ -165,9 +165,10 @@ input {
         font-size: var(--font-size-button-phone);
         color: var(--text-color);
         padding: var(--button-padding-phone);
+        background-color: var(--button-color);
     }
 
-    #submit-btn {
+    #submit-btn:hover {
         background-color: var(--button-color);
     }
 }

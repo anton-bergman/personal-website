@@ -92,7 +92,7 @@
     }
 
     .me-card {
-        height: 115vw;
+        height: fit-content;
         top: -20vw;
         flex-direction: column;
         margin: 3vw;
@@ -182,7 +182,7 @@
     #resume-btn {
         font-size: var(--font-size-button-phone);
         color: var(--text-color);
-        padding: 1.6vw 3.2vw; /* Dubblar padding från vanliga sidan */
+        padding: var(--button-padding-phone);
     }
 
     #resume-btn:hover {

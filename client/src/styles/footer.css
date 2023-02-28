@@ -46,6 +46,7 @@
 
     .footer-container #footer-name {
         font-size: var(--font-size-button-phone);
+        padding: 1vw;
     }
 
     .icon-container a {

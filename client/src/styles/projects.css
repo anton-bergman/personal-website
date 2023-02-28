@@ -162,10 +162,11 @@
     .project-list {
         max-height: 400vh;
         transition: max-height 0s;
+        padding-bottom: 6vw;
     }
 
     #project-list-hidden {
-        max-height: 230vw;
+        max-height: 235vw;
     }
 
     .project-card {
